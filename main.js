@@ -6,18 +6,21 @@ var _ = require('lodash');
 
 
 const WORDS = [
+  ["circle", "res/circle.png", []],
   ["square", "res/square.jpg", []],
   ["octagon", "res/octagon.png", []],
-  ["oval", "res/oval.png", []],
-  ["moon", "res/moon.png", []],
+  ["oval", "res/oval.png", ["ellipse"]],
+  ["moon", "res/moon.png", ["crescent"]],
   ["pentagon", "res/pentagon.png", []],
   ["rectangle", "res/rectangle.gif", []],
   ["hexagon", "res/hexagon.gif", []],
   ["parallelogram", "res/parallelogram.png", []],
   ["heart", "res/heart.jpg", []],
   ["star", "res/star.gif", []],
-  ["diamond", "res/diamond.jpg", []],
+  ["diamond", "res/diamond.jpg", ["rhombus"]],
   ["semicircle", "res/semicircle.gif", []],
+  ["arrow", "res/arrow.png", []],
+  ["triangle", "res/triangle.png", []],
 ]
 
 class App extends React.Component {
