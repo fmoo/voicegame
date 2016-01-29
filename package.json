@@ -18,6 +18,7 @@
     "webpack": "^1.12.12"
   },
   "dependencies": {
+    "array-contains": "0.0.1",
     "lodash": "^4.0.1"
   }
 }
