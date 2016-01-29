@@ -1,0 +1,30 @@
+.promptContainer {
+  position: relative;
+  height: 300px;
+}
+
+.promptImage {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 300px;
+  margin: auto;
+}
+
+.promptImage-enter {
+  opacity: 0.00;
+}
+.promptImage-enter.promptImage-enter-active {
+  opacity: 1.00;
+  transition: opacity 1000ms ease-in;
+}
+
+.promptImage-leave {
+  opacity: 1.00;
+}
+.promptImage-leave.promptImage-leave-active {
+  opacity: 0.00;
+  transform: scale(2.5);
+  transition: all 800ms linear;
+}
