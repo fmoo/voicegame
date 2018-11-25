@@ -3,7 +3,7 @@
 const arrayContains = require('array-contains');
 const React = require('react');
 const ReactDOM = require('react-dom');
-const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+const {CSSTransition} = require('react-transition-group');
 const _ = require('lodash');
 
 
@@ -84,16 +84,18 @@ class Game extends React.Component {
       <div style={{textAlign: "center"}} >
         <h1>What Shape is it?</h1>
         <div className="promptContainer">
-          <ReactCSSTransitionGroup
-            transitionName="promptImage"  
-            transitionEnterTimeout={1000}
-            transitionLeaveTimeout={1000}>
+          <CSSTransition>
+            classNames="promptImage"  
+            timeout={{
+              enter: 1000,
+              exit: 1000,
+            }}>
             <img 
               className="promptImage"
               key={this.state.currentWord[0]}
               src={this.state.currentWord[1]}
             />
-          </ReactCSSTransitionGroup>
+          </CSSTransition>
         </div>
         <RenderSpeech
           onguess={this._onGuess}
